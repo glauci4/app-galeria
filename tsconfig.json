@@ -3,10 +3,10 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./app/*"],
+      "@/style/*": ["./app/style/*"]
+    },
+    "typeRoots": ["./app/types", "./node_modules/@types"]
   },
   "include": [
     "**/*.ts",
