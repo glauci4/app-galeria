@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
+import Fontisto from '@expo/vector-icons/Fontisto';
 import { Cores } from '../style/cores';
 
 export default function TabLayout() {
@@ -15,8 +15,22 @@ export default function TabLayout() {
         headerTitleStyle: { fontWeight: '700', fontSize: 18 },
       }}
     >
-      <Tabs.Screen name="index" options={{ title: 'Galeria', tabBarIcon: ({ color, size }) => <Ionicons name="images-outline" size={size} color={color} />, headerTitle: 'Galeria' }} />
-      <Tabs.Screen name="mapa" options={{ title: 'Mapa', tabBarIcon: ({ color, size }) => <Ionicons name="map-outline" size={size} color={color} />, headerTitle: 'Mapa' }} />
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Galeria',
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => <Fontisto name="photograph" size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="mapa"
+        options={{
+          title: 'Mapa',
+          tabBarIcon: ({ color, size }) => <Fontisto name="map" size={size} color={color} />,
+          headerTitle: 'Mapa',
+        }}
+      />
     </Tabs>
   );
 }

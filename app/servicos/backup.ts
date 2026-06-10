@@ -46,12 +46,7 @@ export async function exportarBackup(): Promise<boolean> {
   }
 }
 
-// Importa um arquivo de backup JSON selecionado pelo usuário.
-// Lê o arquivo, valida o formato e insere os registros no banco de dados.
-// Utiliza `fetch` para ler o conteúdo, pois funciona com qualquer URI (file://, content://, etc.)
-// A validação da extensão `.json` é feita manualmente para contornar limitações do iOS.
-// @returns {Promise<boolean>} - true se a importação foi concluída (mesmo que nenhum arquivo selecionado)
-// @throws {Error} - se o arquivo não puder ser lido, estiver mal formatado ou ocorrer erro na inserção
+// Importa um arquivo de backup JSON selecionado pelo usuário 
 
 export async function importarBackup(): Promise<boolean> {
   try {

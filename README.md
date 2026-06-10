@@ -30,9 +30,7 @@
 
 ## Descrição
 
-Galeria App é um aplicativo móvel desenvolvido com React Native e Expo para organizar, visualizar e salvar fotos e mídias em um banco de dados local SQLite. O sistema destaca-se pela aplicação de filtros em pré-visualização, ordenação de itens por data e proximidade, backup em JSON e visualização das mídias em um mapa com marcadores.
-
-Além do cadastro tradicional, o app oferece geolocalização automática das mídias, organização por distância e acesso offline aos dados salvos. Esses diferenciais tornam o Galeria App ideal para quem precisa gerenciar conteúdos multimídia de forma intuitiva e segura.
+Galeria App é um aplicativo móvel desenvolvido com React Native e Expo para organizar, visualizar e salvar fotos e mídias em um banco de dados local SQLite. O sistema destaca-se pela aplicação de filtros, ordenação de itens por data e proximidade, backup em JSON e visualização das mídias em um mapa com marcadores. Além do cadastro tradicional, o app oferece geolocalização automática das mídias, organização por distância e acesso offline aos dados salvos. Esses diferenciais tornam o Galeria App ideal para quem precisa gerenciar conteúdos multimídia de forma intuitiva e segura.
 
 ## Funcionalidades
 

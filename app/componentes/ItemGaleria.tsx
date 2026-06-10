@@ -8,8 +8,36 @@ import { Photo } from '../database/repositorios/fotos.repositorio';
 interface Props {
   item: Photo;
   onLongPress: (foto: Photo) => void;
-  onPress: (foto: Photo) => void; 
+  onPress: (foto: Photo) => void;
   formatarData?: (iso: string) => string;
+}
+
+// Mesma configuração de filtros do VisualizarMidia
+const FILTRO_CORES: Record<string, { tint: string; opacity: number }> = {
+  original: { tint: 'transparent', opacity: 0 },
+  pb:       { tint: '#888',     opacity: 0.6 },
+  sepia:    { tint: '#704214',  opacity: 0.35 },
+  frio:     { tint: '#0066ff',  opacity: 0.2 },
+  quente:   { tint: '#ff6600',  opacity: 0.2 },
+  rosa:     { tint: '#ff69b4',  opacity: 0.25 },
+  verde:    { tint: '#00cc66',  opacity: 0.2 },
+  roxo:     { tint: '#7c5cbf',  opacity: 0.3 },
+  escuro:   { tint: '#000',     opacity: 0.4 },
+  claro:    { tint: '#fff',     opacity: 0.25 },
+  drama:    { tint: '#001133',  opacity: 0.45 },
+  vintage:  { tint: '#8B4513',  opacity: 0.3 },
+};
+
+function FiltroOverlay({ filtroId }: { filtroId?: string }) {
+  if (!filtroId || filtroId === 'original') return null;
+  const f = FILTRO_CORES[filtroId];
+  if (!f) return null;
+  return (
+    <View
+      style={[StyleSheet.absoluteFill, { backgroundColor: f.tint, opacity: f.opacity }]}
+      pointerEvents="none"
+    />
+  );
 }
 
 export default function ItemGaleria({ item, onLongPress, onPress, formatarData }: Props) {
@@ -26,7 +54,7 @@ export default function ItemGaleria({ item, onLongPress, onPress, formatarData }
   return (
     <TouchableOpacity
       style={styles.tile}
-      onPress={() => onPress(item)}        
+      onPress={() => onPress(item)}
       onLongPress={() => onLongPress(item)}
       activeOpacity={0.8}
     >
@@ -37,6 +65,9 @@ export default function ItemGaleria({ item, onLongPress, onPress, formatarData }
           <Ionicons name="film-outline" size={32} color="#555" />
         </View>
       )}
+
+      {/* Filtro aplicado sobre a imagem (somente fotos) */}
+      {!isVideo && <FiltroOverlay filtroId={(item as any).filtro} />}
 
       {isVideo && (
         <Ionicons

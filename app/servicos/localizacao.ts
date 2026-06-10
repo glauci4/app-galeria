@@ -1,7 +1,5 @@
 // servicos/localizacao.ts
 // Serviço para obter a localização atual do dispositivo e calcular distâncias entre coordenadas.
-// Utiliza o Expo Location para acessar os serviços de localização do dispositivo.
-// Fornece uma função para ordenar fotos por proximidade com a localização atual.
 
 import * as Location from 'expo-location';
 import { Alert } from 'react-native';
