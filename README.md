@@ -18,9 +18,7 @@
 - [Instalação rápida](#instalação-rápida)
 - [Configuração](#configuração)
 - [Uso](#uso)
-- [Capturas de tela](#capturas-de-tela)
 - [Gerar APK com EAS](#gerar-apk-com-eas)
-- [Demonstração](#demonstração)
 - [Estrutura do projeto](#estrutura-do-projeto)
 - [Possíveis problemas](#possíveis-problemas)
 - [Licença](#licença)
@@ -132,23 +130,11 @@ O backup local utiliza o sistema de arquivos do Expo. Verifique se a pasta de de
 5. Use a tela de listagem para buscar, editar ou visualizar a mídia.
 6. Acesse o mapa para ver a localização das mídias cadastradas.
 
-## Capturas de tela
-
-![Tela da galeria](./screenshots/galeria.png)
-
-![Tela de detalhes](./screenshots/detalhes.png)
-
-![Mapa de mídias](./screenshots/mapa.png)
-
 ## Gerar APK com EAS
 
 ```bash
 eas build -p android --profile preview
 ```
-
-## Demonstração
-
-[Assista ao vídeo de demonstração](https://link_do_seu_video)
 
 ## Estrutura do projeto
 
